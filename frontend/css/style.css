@@ -1,0 +1,104 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+  
+a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+img {
+    max-width: 100%;
+}
+  
+body {
+    font-family: Arial, Verdana, sans-serif;
+}
+ 
+.container{
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+ 
+}
+
+
+    .error-message {
+        color: red;
+        font-size: 7px;
+        margin-top: -58px;
+        padding-left: 7px;
+    }
+
+.form-control{
+    margin-bottom: 20px;  
+    max-width: 100%;
+}
+
+.button{
+    height: 50%;
+    margin-top: 2%;
+    position: relative;
+}
+/* Стили стрелок для сортировки */
+th.sortable {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  th.sortable:after {
+    content: '⇳';
+    position: absolute;
+    right: 5px;
+    transform: rotate(180deg);
+  }
+  
+  th.sortable.asc:after {
+    content: '⇮';
+    transform: rotate(180deg);
+  }
+  
+  th.sortable.desc:after {
+    content: '⇮';
+    transform: rotate(0deg);
+  }
+
+.button__filter:not(:last-child){
+    margin-right: 30px;
+}
+
+.error-container {
+    font-size: 8px;
+    color: red;
+    padding: 2px;
+    margin: -2px 0 0 74%;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 2px solid #ff3c0081;
+    }
+
+#error-container {
+  transition-timing-function: ease;
+  transition: 0.2s;
+  opacity: 0;
+
+}
+
+#error-container.show {
+  transition-timing-function: ease-out;
+  transition: 0.25s;
+  opacity: 1;
+}    
